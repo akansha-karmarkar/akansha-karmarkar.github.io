@@ -3,131 +3,177 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Akansha Karmarkar | Data Analyst</title>
+<title>Akansha Karmarkar | Data Analytics Portfolio</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 
 <style>
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Inter', sans-serif;
 }
 
 body {
-    background: linear-gradient(135deg, #eef2ff, #f8f9ff);
-    color: #333;
+    background: #0f172a;
+    color: #e2e8f0;
     scroll-behavior: smooth;
 }
 
-header {
-    text-align: center;
-    padding: 80px 20px;
-    animation: fadeIn 2s ease-in-out;
+section {
+    padding: 80px 10%;
 }
 
-header h1 {
-    font-size: 42px;
-    font-weight: 600;
+h1, h2 {
+    font-weight: 700;
 }
 
-header p {
-    margin-top: 15px;
+.hero {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    animation: fadeIn 1.5s ease-in;
+}
+
+.hero h1 {
+    font-size: 48px;
+    background: linear-gradient(90deg,#38bdf8,#6366f1);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.hero p {
+    margin-top: 20px;
     font-size: 18px;
-    color: #555;
-}
-
-.section {
-    padding: 60px 20px;
-    max-width: 1000px;
-    margin: auto;
+    color: #94a3b8;
 }
 
 .card {
-    background: white;
+    background: rgba(255,255,255,0.05);
+    backdrop-filter: blur(10px);
     padding: 30px;
-    margin: 20px 0;
-    border-radius: 15px;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.05);
-    transition: transform 0.3s ease;
+    border-radius: 16px;
+    margin-top: 30px;
+    transition: 0.3s;
 }
 
 .card:hover {
     transform: translateY(-8px);
+    box-shadow: 0 0 25px rgba(99,102,241,0.4);
 }
 
-h2 {
-    margin-bottom: 20px;
-    color: #4f46e5;
+.skills span {
+    display: block;
+    margin: 15px 0 5px;
 }
 
-ul {
-    padding-left: 20px;
+.progress {
+    height: 8px;
+    background: #1e293b;
+    border-radius: 10px;
+}
+
+.progress div {
+    height: 8px;
+    border-radius: 10px;
+    background: linear-gradient(90deg,#38bdf8,#6366f1);
 }
 
 footer {
     text-align: center;
     padding: 40px;
-    font-size: 14px;
-    color: #666;
+    color: #64748b;
 }
 
 @keyframes fadeIn {
-    from { opacity: 0; transform: translateY(20px); }
-    to { opacity: 1; transform: translateY(0); }
+    from {opacity: 0; transform: translateY(20px);}
+    to {opacity: 1; transform: translateY(0);}
 }
 </style>
 </head>
 
 <body>
 
-<header>
-    <h1>Hi, I'm Akansha Karmarkar 👋</h1>
-    <p>Data Analyst | Data Scientist | Machine Learning Engineer</p>
-    <p>MS in Advanced Data Analytics | GPA: 3.8</p>
-</header>
+<section class="hero">
+    <h1>Akansha Karmarkar</h1>
+    <p>Data Analyst • Data Scientist • Machine Learning Engineer</p>
+    <p>MS in Advanced Data Analytics | GPA 3.8</p>
+</section>
 
-<section class="section">
+<section>
+    <h2>About Me</h2>
     <div class="card">
-        <h2>🌟 About Me</h2>
         <p>
-            I specialize in building scalable data analytics solutions across enterprise systems. 
-            With experience in analyzing large datasets, designing dashboards, and implementing 
-            machine learning models, I focus on delivering actionable insights that drive business impact.
+        I design scalable analytics systems that turn large-scale data into measurable business outcomes.
+        My work spans airline forecasting (50M+ records), healthcare revenue analytics (100M+ rows),
+        and campaign performance modeling.
+        </p>
+        <p style="margin-top:15px;">
+        I specialize in predictive modeling, SQL optimization, ETL engineering, and dashboard development
+        that directly improves operational efficiency and decision accuracy.
         </p>
     </div>
+</section>
+
+<section>
+    <h2>Impact Highlights</h2>
+    <div class="card">
+        ✈ Built airline staffing prediction models using 50M+ records<br><br>
+        🏥 Optimized SQL pipelines handling 100M+ rows<br><br>
+        ⚡ Improved system performance by 40% through query optimization<br><br>
+        📊 Delivered executive dashboards for KPI-driven decisions
+    </div>
+</section>
+
+<section>
+    <h2>Technical Skills</h2>
+    <div class="card skills">
+        <span>Python & Machine Learning</span>
+        <div class="progress"><div style="width:90%"></div></div>
+
+        <span>SQL & Data Engineering</span>
+        <div class="progress"><div style="width:95%"></div></div>
+
+        <span>Visualization (Tableau / Power BI)</span>
+        <div class="progress"><div style="width:85%"></div></div>
+
+        <span>Big Data & Cloud</span>
+        <div class="progress"><div style="width:80%"></div></div>
+    </div>
+</section>
+
+<section>
+    <h2>Featured Projects</h2>
 
     <div class="card">
-        <h2>🛠 Technical Skills</h2>
-        <ul>
-            <li>Python, SQL, R</li>
-            <li>Machine Learning & Statistical Modeling</li>
-            <li>Tableau, Power BI</li>
-            <li>Data Cleaning & ETL</li>
-            <li>Cloud & Big Data Tools</li>
-        </ul>
+        <strong>Airline Operations Predictive Modeling</strong>
+        <p>Forecasting workforce demand using ML time-series techniques.</p>
     </div>
 
     <div class="card">
-        <h2>📊 Featured Projects</h2>
-        <ul>
-            <li><strong>Customer Churn Prediction:</strong> Built ML models to predict customer retention.</li>
-            <li><strong>Sales Dashboard:</strong> Interactive Tableau dashboard for revenue analysis.</li>
-            <li><strong>Fraud Detection System:</strong> Classification model for financial fraud detection.</li>
-        </ul>
+        <strong>Healthcare Revenue Optimization</strong>
+        <p>SQL pipeline engineering & cost-performance modeling.</p>
     </div>
 
     <div class="card">
-        <h2>📫 Contact</h2>
-        <p>Email: your-email@example.com</p>
-        <p>LinkedIn: Add your LinkedIn link here</p>
-        <p>GitHub: https://github.com/akansha-karmarkar</p>
+        <strong>Behavioral Analytics Dashboard</strong>
+        <p>Executive KPI dashboard built with Tableau.</p>
+    </div>
+</section>
+
+<section>
+    <h2>Contact</h2>
+    <div class="card">
+        📧 akarmarkar099@gmail.com<br><br>
+        🔗 LinkedIn: in/akansha-karmarkar<br><br>
+        💻 GitHub: github.com/akansha-karmarkar
     </div>
 </section>
 
 <footer>
-    © 2026 Akansha Karmarkar | Built with ❤️ using GitHub Pages
+    © 2026 Akansha Karmarkar • Built with GitHub Pages
 </footer>
 
 </body>
