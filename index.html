@@ -18,7 +18,7 @@ font-family:'Poppins',sans-serif;
 body{
 background: linear-gradient(-45deg,#0f0c29,#302b63,#24243e,#1a1a40);
 background-size:400% 400%;
-animation:gradientMove 15s ease infinite;
+animation:gradientMove 18s ease infinite;
 color:#f1f1f1;
 scroll-behavior:smooth;
 }
@@ -29,7 +29,6 @@ scroll-behavior:smooth;
 100%{background-position:0% 50%;}
 }
 
-/* NAVBAR */
 nav{
 position:fixed;
 width:100%;
@@ -37,13 +36,13 @@ top:0;
 display:flex;
 justify-content:space-between;
 padding:20px 10%;
-background:rgba(0,0,0,0.3);
+background:rgba(0,0,0,0.35);
 backdrop-filter:blur(12px);
 z-index:1000;
 }
 
 nav a{
-color:#ffffff;
+color:#fff;
 text-decoration:none;
 margin-left:25px;
 font-weight:500;
@@ -54,7 +53,6 @@ nav a:hover{
 color:#ff7eb3;
 }
 
-/* HERO */
 .hero{
 height:100vh;
 display:flex;
@@ -70,9 +68,9 @@ background:linear-gradient(90deg,#ff758c,#ff7eb3,#a18cd1);
 -webkit-text-fill-color:transparent;
 }
 
-.hero p{
-margin-top:20px;
-font-size:20px;
+.hero h2{
+margin-top:15px;
+font-weight:400;
 color:#ddd;
 }
 
@@ -93,20 +91,18 @@ transform:translateY(-4px);
 box-shadow:0 15px 35px rgba(255,118,167,0.4);
 }
 
-/* SECTIONS */
 section{
 padding:100px 10%;
 }
 
-h2{
-font-size:38px;
-margin-bottom:40px;
+h2.section-title{
+font-size:40px;
+margin-bottom:50px;
 background:linear-gradient(90deg,#fbc2eb,#a6c1ee);
 -webkit-background-clip:text;
 -webkit-text-fill-color:transparent;
 }
 
-/* CARDS */
 .card{
 background:rgba(255,255,255,0.08);
 padding:30px;
@@ -114,6 +110,13 @@ border-radius:25px;
 margin-bottom:30px;
 backdrop-filter:blur(20px);
 transition:0.4s;
+opacity:0;
+transform:translateY(30px);
+}
+
+.card.show{
+opacity:1;
+transform:translateY(0);
 }
 
 .card:hover{
@@ -127,11 +130,29 @@ grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
 gap:30px;
 }
 
-/* FOOTER */
+.metrics{
+display:flex;
+gap:50px;
+flex-wrap:wrap;
+margin-top:30px;
+}
+
+.metric{
+font-size:30px;
+font-weight:700;
+color:#ff7eb3;
+}
+
 footer{
 text-align:center;
 padding:40px;
 color:#ccc;
+}
+
+/* Fade-in animation */
+@media (prefers-reduced-motion: no-preference) {
+.hidden { opacity: 0; transform: translateY(40px); }
+.show { opacity: 1; transform: translateY(0); transition: all 1s ease; }
 }
 </style>
 </head>
@@ -142,6 +163,7 @@ color:#ccc;
 <div><strong>Akansha</strong></div>
 <div>
 <a href="#about">About</a>
+<a href="#experience">Experience</a>
 <a href="#projects">Projects</a>
 <a href="#skills">Skills</a>
 <a href="#contact">Contact</a>
@@ -150,61 +172,81 @@ color:#ccc;
 
 <div class="hero">
 <h1>Hi, I'm Akansha 👋</h1>
-<p>Data Analyst • Data Scientist • Machine Learning Engineer</p>
-<p>Transforming complex data into elegant business intelligence.</p>
+<h2>Data Analyst • Data Scientist • Machine Learning Engineer</h2>
+<p>Engineering scalable analytics systems that transform complex enterprise data into strategic business decisions.</p>
 <a href="#projects" class="btn">Explore My Work</a>
 </div>
 
 <section id="about">
-<h2>About Me</h2>
-<div class="card">
-I specialize in designing scalable analytics systems across airline forecasting, healthcare revenue optimization, and enterprise performance modeling.
+<h2 class="section-title">About Me</h2>
+<div class="card hidden">
+Master of Science in Advanced Data Analytics (GPA 3.8) with experience across airline operations, healthcare revenue analytics, and campaign performance modeling. 
 
-From 50M+ airline records to 100M+ healthcare data pipelines, I engineer structured workflows and predictive models that drive measurable business impact.
+I specialize in predictive modeling, SQL optimization, large-scale ETL pipelines, and executive visualization systems that deliver measurable business impact.
+</div>
+</section>
+
+<section id="experience">
+<h2 class="section-title">Impact & Scale</h2>
+<div class="card hidden">
+<div class="metrics">
+<div>
+<div class="metric">100M+</div>
+<p>Healthcare Records Processed</p>
+</div>
+<div>
+<div class="metric">50M+</div>
+<p>Airline Operational Data Points</p>
+</div>
+<div>
+<div class="metric">40%</div>
+<p>Query Performance Improvement</p>
+</div>
+</div>
 </div>
 </section>
 
 <section id="projects">
-<h2>Featured Projects</h2>
+<h2 class="section-title">Featured Projects</h2>
 <div class="grid">
 
-<div class="card">
+<div class="card hidden">
 <h3>✈ Airline Operations Forecasting</h3>
-<p>Time-series ML models predicting staffing demand using large-scale operational datasets.</p>
+<p>Developed time-series forecasting models predicting staffing demand using large-scale operational datasets. Improved planning efficiency and cost allocation accuracy.</p>
 </div>
 
-<div class="card">
+<div class="card hidden">
 <h3>🏥 Healthcare Revenue Optimization</h3>
-<p>SQL pipeline engineering & performance tuning improving system efficiency by 40%.</p>
+<p>Engineered SQL performance optimization strategies for 100M+ row datasets, reducing processing time and improving data reliability for revenue reporting.</p>
 </div>
 
-<div class="card">
+<div class="card hidden">
 <h3>📊 Executive Tableau Dashboard</h3>
-<p>Leadership-level KPI dashboards translating campaign performance into insights.</p>
+<p>Designed KPI dashboards for leadership enabling campaign ROI tracking, operational monitoring, and strategic performance evaluation.</p>
 </div>
 
-<div class="card">
+<div class="card hidden">
 <h3>⚙ ETL & Data Quality Framework</h3>
-<p>Automated data validation & transformation architecture ensuring reporting integrity.</p>
+<p>Built automated ETL pipelines with validation checkpoints ensuring structured data transformation and reporting integrity.</p>
 </div>
 
 </div>
 </section>
 
 <section id="skills">
-<h2>Technical Expertise</h2>
-<div class="card">
+<h2 class="section-title">Technical Expertise</h2>
+<div class="card hidden">
 <strong>Languages:</strong> Python, SQL, R, Oracle PL/SQL<br><br>
-<strong>Machine Learning:</strong> Regression, Classification, Time Series<br><br>
-<strong>Data Engineering:</strong> ETL Pipelines, Query Optimization, Parquet<br><br>
-<strong>Visualization:</strong> Tableau, Power BI, Excel<br><br>
+<strong>Machine Learning:</strong> Regression, Classification, Time Series Forecasting<br><br>
+<strong>Data Engineering:</strong> ETL Pipelines, Query Optimization, Apache Parquet<br><br>
+<strong>Visualization:</strong> Tableau, Power BI, Excel (Advanced)<br><br>
 <strong>Big Data & Cloud:</strong> Spark, Hadoop, Snowflake, GCP
 </div>
 </section>
 
 <section id="contact">
-<h2>Let's Connect</h2>
-<div class="card">
+<h2 class="section-title">Let's Connect</h2>
+<div class="card hidden">
 📧 akarmarkar099@gmail.com<br><br>
 🔗 LinkedIn: in/akansha-karmarkar<br><br>
 💻 GitHub: github.com/akansha-karmarkar
@@ -214,6 +256,18 @@ From 50M+ airline records to 100M+ healthcare data pipelines, I engineer structu
 <footer>
 © 2026 Akansha Karmarkar • Built with GitHub Pages
 </footer>
+
+<script>
+const observer = new IntersectionObserver(entries => {
+entries.forEach(entry => {
+if(entry.isIntersecting){
+entry.target.classList.add('show');
+}
+});
+});
+
+document.querySelectorAll('.hidden').forEach(el => observer.observe(el));
+</script>
 
 </body>
 </html>
