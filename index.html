@@ -1,160 +1,133 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Akansha Karmarkar | Data Analytics Portfolio</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Akansha Karmarkar | Data Analyst</title>
 
-    <style>
-        body {
-            margin: 0;
-            font-family: 'Segoe UI', sans-serif;
-            background-color: #f9fafc;
-            color: #1a1a1a;
-        }
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
-        .container {
-            max-width: 1000px;
-            margin: auto;
-            padding: 40px 20px;
-        }
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
 
-        h1 {
-            font-size: 42px;
-            margin-bottom: 5px;
-        }
+body {
+    background: linear-gradient(135deg, #eef2ff, #f8f9ff);
+    color: #333;
+    scroll-behavior: smooth;
+}
 
-        h2 {
-            margin-top: 60px;
-            border-bottom: 2px solid #e6e6e6;
-            padding-bottom: 10px;
-        }
+header {
+    text-align: center;
+    padding: 80px 20px;
+    animation: fadeIn 2s ease-in-out;
+}
 
-        .subtitle {
-            font-size: 18px;
-            color: #555;
-        }
+header h1 {
+    font-size: 42px;
+    font-weight: 600;
+}
 
-        .card {
-            background: white;
-            padding: 25px;
-            margin-top: 20px;
-            border-radius: 12px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-        }
+header p {
+    margin-top: 15px;
+    font-size: 18px;
+    color: #555;
+}
 
-        .project {
-            margin-bottom: 25px;
-        }
+.section {
+    padding: 60px 20px;
+    max-width: 1000px;
+    margin: auto;
+}
 
-        a {
-            text-decoration: none;
-            color: #2563eb;
-            font-weight: 500;
-        }
+.card {
+    background: white;
+    padding: 30px;
+    margin: 20px 0;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease;
+}
 
-        .button {
-            display: inline-block;
-            padding: 12px 20px;
-            background: #2563eb;
-            color: white;
-            border-radius: 8px;
-            margin-top: 15px;
-        }
+.card:hover {
+    transform: translateY(-8px);
+}
 
-        .skills span {
-            display: inline-block;
-            background: #eef2ff;
-            padding: 8px 12px;
-            border-radius: 6px;
-            margin: 5px 5px 0 0;
-            font-size: 14px;
-        }
+h2 {
+    margin-bottom: 20px;
+    color: #4f46e5;
+}
 
-        footer {
-            margin-top: 80px;
-            padding: 30px 0;
-            text-align: center;
-            font-size: 14px;
-            color: #777;
-        }
+ul {
+    padding-left: 20px;
+}
 
-    </style>
+footer {
+    text-align: center;
+    padding: 40px;
+    font-size: 14px;
+    color: #666;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+</style>
 </head>
 
 <body>
 
-<div class="container">
+<header>
+    <h1>Hi, I'm Akansha Karmarkar 👋</h1>
+    <p>Data Analyst | Data Scientist | Machine Learning Engineer</p>
+    <p>MS in Advanced Data Analytics | GPA: 3.8</p>
+</header>
 
-    <h1>Akansha Karmarkar</h1>
-    <div class="subtitle">
-        Data Analyst | Machine Learning | SQL Optimization | Tableau | Spark
-    </div>
-
-    <h2>About Me</h2>
+<section class="section">
     <div class="card">
+        <h2>🌟 About Me</h2>
         <p>
-        I am a data analytics professional with 3+ years of experience transforming large-scale enterprise datasets into actionable insights. I have worked with healthcare, airline operations, and education analytics, processing over 100M+ records and building predictive models achieving up to 97% accuracy.
-        </p>
-
-        <p>
-        My expertise includes SQL performance optimization, KPI framework development, predictive modeling, and executive dashboard design. I focus on delivering scalable analytics solutions that directly support business decision-making.
+            I specialize in building scalable data analytics solutions across enterprise systems. 
+            With experience in analyzing large datasets, designing dashboards, and implementing 
+            machine learning models, I focus on delivering actionable insights that drive business impact.
         </p>
     </div>
 
-    <h2>Core Skills</h2>
-    <div class="card skills">
-        <span>Python</span>
-        <span>SQL</span>
-        <span>R</span>
-        <span>Machine Learning</span>
-        <span>Time Series Forecasting</span>
-        <span>Tableau</span>
-        <span>Power BI</span>
-        <span>Spark</span>
-        <span>Snowflake</span>
-        <span>Data Engineering</span>
-        <span>ETL Pipelines</span>
-    </div>
-
-    <h2>Featured Projects</h2>
     <div class="card">
-
-        <div class="project">
-            <strong>✈ Airline Operations Analytics</strong><br>
-            Predictive staffing optimization using ML models and time-based forecasting.<br>
-            <a href="https://github.com/akansha-karmarkar/airline-operations-analytics-case-study">View Project →</a>
-        </div>
-
-        <div class="project">
-            <strong>🏥 Healthcare Revenue Analytics</strong><br>
-            SQL optimization & enterprise dashboard standardization across global operations.<br>
-            <a href="https://github.com/akansha-karmarkar/healthcare-revenue-analytics-case-study">View Project →</a>
-        </div>
-
-        <div class="project">
-            <strong>📊 Executive Tableau Dashboard</strong><br>
-            Leadership-level KPI dashboards with global SLA tracking and revenue analytics.<br>
-            <a href="https://github.com/akansha-karmarkar/executive-tableau-dashboard-case-study">View Project →</a>
-        </div>
-
+        <h2>🛠 Technical Skills</h2>
+        <ul>
+            <li>Python, SQL, R</li>
+            <li>Machine Learning & Statistical Modeling</li>
+            <li>Tableau, Power BI</li>
+            <li>Data Cleaning & ETL</li>
+            <li>Cloud & Big Data Tools</li>
+        </ul>
     </div>
 
-    <h2>Resume</h2>
     <div class="card">
-        <p>You can download my resume below:</p>
-        <a class="button" href="YOUR_RESUME_LINK_HERE">Download Resume</a>
+        <h2>📊 Featured Projects</h2>
+        <ul>
+            <li><strong>Customer Churn Prediction:</strong> Built ML models to predict customer retention.</li>
+            <li><strong>Sales Dashboard:</strong> Interactive Tableau dashboard for revenue analysis.</li>
+            <li><strong>Fraud Detection System:</strong> Classification model for financial fraud detection.</li>
+        </ul>
     </div>
 
-    <h2>Contact</h2>
     <div class="card">
-        <p>Email: akarmarkar099@gmail.com</p>
-        <p>LinkedIn: <a href="https://www.linkedin.com/in/akansha-karmarkar/">linkedin.com/in/akansha-karmarkar</a></p>
+        <h2>📫 Contact</h2>
+        <p>Email: your-email@example.com</p>
+        <p>LinkedIn: Add your LinkedIn link here</p>
+        <p>GitHub: https://github.com/akansha-karmarkar</p>
     </div>
-
-</div>
+</section>
 
 <footer>
-    © 2026 Akansha Karmarkar | Data Analytics Portfolio
+    © 2026 Akansha Karmarkar | Built with ❤️ using GitHub Pages
 </footer>
 
 </body>
