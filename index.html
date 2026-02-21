@@ -5,20 +5,28 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Akansha Karmarkar | Data Portfolio</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
 <style>
 *{
 margin:0;
 padding:0;
 box-sizing:border-box;
-font-family:'Inter',sans-serif;
+font-family:'Poppins',sans-serif;
 }
 
 body{
-background:#0f172a;
-color:#e2e8f0;
+background: linear-gradient(-45deg,#0f0c29,#302b63,#24243e,#1a1a40);
+background-size:400% 400%;
+animation:gradientMove 15s ease infinite;
+color:#f1f1f1;
 scroll-behavior:smooth;
+}
+
+@keyframes gradientMove{
+0%{background-position:0% 50%;}
+50%{background-position:100% 50%;}
+100%{background-position:0% 50%;}
 }
 
 /* NAVBAR */
@@ -29,13 +37,13 @@ top:0;
 display:flex;
 justify-content:space-between;
 padding:20px 10%;
-background:rgba(15,23,42,0.8);
-backdrop-filter:blur(10px);
+background:rgba(0,0,0,0.3);
+backdrop-filter:blur(12px);
 z-index:1000;
 }
 
 nav a{
-color:#e2e8f0;
+color:#ffffff;
 text-decoration:none;
 margin-left:25px;
 font-weight:500;
@@ -43,7 +51,7 @@ transition:0.3s;
 }
 
 nav a:hover{
-color:#38bdf8;
+color:#ff7eb3;
 }
 
 /* HERO */
@@ -56,8 +64,8 @@ padding:0 10%;
 }
 
 .hero h1{
-font-size:60px;
-background:linear-gradient(90deg,#38bdf8,#6366f1);
+font-size:65px;
+background:linear-gradient(90deg,#ff758c,#ff7eb3,#a18cd1);
 -webkit-background-clip:text;
 -webkit-text-fill-color:transparent;
 }
@@ -65,23 +73,24 @@ background:linear-gradient(90deg,#38bdf8,#6366f1);
 .hero p{
 margin-top:20px;
 font-size:20px;
-color:#94a3b8;
+color:#ddd;
 }
 
 .btn{
 display:inline-block;
 margin-top:30px;
-padding:12px 25px;
-background:linear-gradient(90deg,#38bdf8,#6366f1);
-border-radius:30px;
+padding:12px 30px;
+background:linear-gradient(90deg,#ff758c,#a18cd1);
+border-radius:40px;
 text-decoration:none;
 color:white;
+font-weight:500;
 transition:0.3s;
 }
 
 .btn:hover{
-transform:translateY(-3px);
-box-shadow:0 10px 25px rgba(99,102,241,0.5);
+transform:translateY(-4px);
+box-shadow:0 15px 35px rgba(255,118,167,0.4);
 }
 
 /* SECTIONS */
@@ -90,21 +99,26 @@ padding:100px 10%;
 }
 
 h2{
-font-size:36px;
+font-size:38px;
 margin-bottom:40px;
+background:linear-gradient(90deg,#fbc2eb,#a6c1ee);
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
 }
 
+/* CARDS */
 .card{
-background:rgba(255,255,255,0.05);
+background:rgba(255,255,255,0.08);
 padding:30px;
-border-radius:20px;
+border-radius:25px;
 margin-bottom:30px;
-transition:0.3s;
+backdrop-filter:blur(20px);
+transition:0.4s;
 }
 
 .card:hover{
-transform:translateY(-8px);
-box-shadow:0 0 25px rgba(99,102,241,0.3);
+transform:translateY(-10px);
+box-shadow:0 0 40px rgba(255,118,167,0.3);
 }
 
 .grid{
@@ -117,7 +131,7 @@ gap:30px;
 footer{
 text-align:center;
 padding:40px;
-color:#64748b;
+color:#ccc;
 }
 </style>
 </head>
@@ -135,18 +149,18 @@ color:#64748b;
 </nav>
 
 <div class="hero">
-<h1>Hi, I'm Akansha</h1>
+<h1>Hi, I'm Akansha 👋</h1>
 <p>Data Analyst • Data Scientist • Machine Learning Engineer</p>
-<p>Turning complex data into measurable business impact.</p>
-<a href="#projects" class="btn">View My Work</a>
+<p>Transforming complex data into elegant business intelligence.</p>
+<a href="#projects" class="btn">Explore My Work</a>
 </div>
 
 <section id="about">
 <h2>About Me</h2>
 <div class="card">
-I design scalable analytics systems across airline forecasting, healthcare revenue optimization, and campaign performance modeling. 
+I specialize in designing scalable analytics systems across airline forecasting, healthcare revenue optimization, and enterprise performance modeling.
 
-I’ve worked with datasets exceeding 100M+ records, engineered SQL pipelines, built predictive ML models, and developed executive dashboards that drive data-backed decision making.
+From 50M+ airline records to 100M+ healthcare data pipelines, I engineer structured workflows and predictive models that drive measurable business impact.
 </div>
 </section>
 
@@ -155,50 +169,50 @@ I’ve worked with datasets exceeding 100M+ records, engineered SQL pipelines, b
 <div class="grid">
 
 <div class="card">
-<h3>Airline Operations Forecasting</h3>
-<p>Built predictive staffing models using 50M+ records and time-series ML techniques.</p>
+<h3>✈ Airline Operations Forecasting</h3>
+<p>Time-series ML models predicting staffing demand using large-scale operational datasets.</p>
 </div>
 
 <div class="card">
-<h3>Healthcare Revenue Analytics</h3>
-<p>Optimized SQL pipelines handling 100M+ rows improving performance by 40%.</p>
+<h3>🏥 Healthcare Revenue Optimization</h3>
+<p>SQL pipeline engineering & performance tuning improving system efficiency by 40%.</p>
 </div>
 
 <div class="card">
-<h3>Behavioral Analytics Dashboard</h3>
-<p>Designed executive KPI dashboards using Tableau for leadership decisions.</p>
+<h3>📊 Executive Tableau Dashboard</h3>
+<p>Leadership-level KPI dashboards translating campaign performance into insights.</p>
 </div>
 
 <div class="card">
-<h3>ETL & Data Quality Framework</h3>
-<p>Engineered automated pipelines ensuring data integrity and reporting accuracy.</p>
+<h3>⚙ ETL & Data Quality Framework</h3>
+<p>Automated data validation & transformation architecture ensuring reporting integrity.</p>
 </div>
 
 </div>
 </section>
 
 <section id="skills">
-<h2>Technical Skills</h2>
+<h2>Technical Expertise</h2>
 <div class="card">
 <strong>Languages:</strong> Python, SQL, R, Oracle PL/SQL<br><br>
-<strong>ML:</strong> Regression, Classification, Time Series Forecasting<br><br>
-<strong>Data Engineering:</strong> ETL, Query Optimization, Apache Parquet<br><br>
+<strong>Machine Learning:</strong> Regression, Classification, Time Series<br><br>
+<strong>Data Engineering:</strong> ETL Pipelines, Query Optimization, Parquet<br><br>
 <strong>Visualization:</strong> Tableau, Power BI, Excel<br><br>
 <strong>Big Data & Cloud:</strong> Spark, Hadoop, Snowflake, GCP
 </div>
 </section>
 
 <section id="contact">
-<h2>Contact</h2>
+<h2>Let's Connect</h2>
 <div class="card">
 📧 akarmarkar099@gmail.com<br><br>
-🔗 LinkedIn: in/akansha-karmarkar/<br><br>
+🔗 LinkedIn: in/akansha-karmarkar<br><br>
 💻 GitHub: github.com/akansha-karmarkar
 </div>
 </section>
 
 <footer>
-
+© 2026 Akansha Karmarkar • Built with GitHub Pages
 </footer>
 
 </body>
